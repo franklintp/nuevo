@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Programacion y hacker</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<h2>Franklin Torres Pumacallahui</h2>
+<style>
+   
+    *{
+    margin: 0;
+}
+
+body{
+    min-height: 100vh;
+    background: url(franklin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+
+  
+
+    .contenedor {
+        color: rgb(238, 5, 5);
+        font: 6em;
+        width: 900px;
+        margin-top: 100px;
+        text-align: center;
+        position: absolute;
+        
+    }
+
+    .titulo {
+        margin-bottom: 20px;
+    }
+
+    .opciones p {
+        background: #f18a04;
+        display: initial;
+        width: 900;
+        padding: 20px;
+        text-align: center;
+        color: #db1919;
+        border-radius: 2px;
+        font-weight: bold;
+        
+    }
+
+    p.p1 {
+        position: absolute;
+        top: 400px;
+        left: 609px;
+        width: 100px;
+    }
+
+    p.p2 {
+        position: absolute;
+        top: 400px;
+        left: 800px;
+        width: 100px;
+    }
+
+    #si {
+        background: #2bff00;
+        border-radius: 10%;
+        left: 420px; position: absolute;
+        top: 10%;
+        width: 550px;
+        color: #ffffff;
+        padding: 50px;
+        display: none;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".p1").hover(function () {
+            arriba = Math.random() * (400 - 1) + 1;
+            abajo = Math.random() * (609 - 1) + 1;
+            $(this).css("top", arriba);
+            $(this).css("left", abajo);
+        });
+    });
+    function dijoSi() {
+        document.getElementById("si").style.display = "block";
+    }
+</script>
+
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>¿QUIERES SER MI NOVIA?</h1>
+            <div>
+                <img src="https://okdiario.com/img/2017/03/31/de-paseo-por-el-corazon-humano-b.jpg" width="500">
+            </div>
+        </div>
+
+        
+        <div class="opciones">
+            <p class="p1">NO</p>
+            <p onclick="dijoSi()" class="p2">SI</p>
+            <div id="si">
+                <img src="https://norfipc.com/fotos/mensajes/asi-tu-y-yo.jpeg" width="70%">
+                <h2>Gracias bb, lo sabía. Feliz primer día de novios.          TE AMO 
+                </h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
