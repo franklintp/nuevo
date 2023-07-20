@@ -1,2 +1,2 @@
 # 
-fkfk
+print(input"declaracion")
